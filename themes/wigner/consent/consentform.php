@@ -61,7 +61,9 @@ $this->data['head']  = '<link rel="stylesheet" type="text/css" href="/' .
 
 $this->includeAtTemplateBase('includes/header.php');
 ?>
-
+                <div>
+                        <img id="logo" src="<?php echo SimpleSAML_Module::getModuleURL('themewigner/wigner_logo.png'); ?>" />
+</div>
 <div class="container">
 <h2>Adatkezelési hozzájárulás</h2>
 <p>

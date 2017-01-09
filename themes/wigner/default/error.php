@@ -22,17 +22,16 @@ header('X-Frame-Options: SAMEORIGIN');
 	<meta name="robots" content="noindex, nofollow" />
     <meta name="googlebot" content="noarchive, nofollow" />';
 	
-	<title><?php
-if(array_key_exists('header', $this->data)) {
-        echo $this->data['header'];
-} else {
-        echo 'simpleSAMLphp';
-}
+	<title><?php if(array_key_exists('header', $this->data)) {
+		echo $this->data['header'];
+		} else {
+			echo 'simpleSAMLphp';
+		}
 ?></title>
 
-	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleURL('themeniifi/style.css'); ?>" />
-    <link rel="stylesheet" media="screen and (max-width: 370px)" href="<?php echo SimpleSAML_Module::getModuleURL('themeniifi/style_320.css'); ?>" />
-	<link rel="stylesheet" media="screen and (max-device-width: 480px), handheld" href="<?php echo SimpleSAML_Module::getModuleURL('themeniifi/style_480.css'); ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleURL('themewigner/style.css'); ?>" />
+    <link rel="stylesheet" media="screen and (max-width: 370px)" href="<?php echo SimpleSAML_Module::getModuleURL('themewigner/style_320.css'); ?>" />
+	<link rel="stylesheet" media="screen and (max-device-width: 480px), handheld" href="<?php echo SimpleSAML_Module::getModuleURL('themewigner/style_480.css'); ?>" />
 
 </head>
 
@@ -42,21 +41,15 @@ if(array_key_exists('header', $this->data)) {
 
 
 		<div id="header">
-			<img id="logo" src="<?php echo SimpleSAML_Module::getModuleURL('themeniifi/niifi_logo.png'); ?>" />
+			<img id="logo" src="<?php echo SimpleSAML_Module::getModuleURL('themewigner/wigner_logo.png'); ?>" />
 			<h1 class="mainTitle"></h1>
 
 		</div>
 
-		
 		<div id="content">
 			<div class="item">
 				<h1><?php echo $this->t($this->data['dictTitle']); ?></h1>
-				<p><?php
-echo htmlspecialchars($this->t($this->data['dictDescr'], $this->data['parameters']));?></p>
-				<!--<p>
-					Bij aanhoudende problemen kun je contact opnemen met <a href="https://servicedesk.c-college.nl" target="_blank">https://servicedesk.c-college.nl</a>, telefoon 088-4699070 
-					of e&#8209;mail&nbsp;<a href="mailto: servicedesk@c-college.nl">servicedesk@c-college.nl</a>
-				</p>-->
+				<p><?php echo htmlspecialchars($this->t($this->data['dictDescr'], $this->data['parameters']));?></p>
 				<p>
 
                     <?php echo $this->t('report_trackid'); ?>

@@ -30,9 +30,9 @@ if(array_key_exists('header', $this->data)) {
 }
 ?></title>
 
-	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleURL('themeniifi/style.css'); ?>" />
-  	<link rel="stylesheet" media="screen and (max-width: 370px)" href="<?php echo SimpleSAML_Module::getModuleURL('themeniifi/style_320.css'); ?>" />
-	<link rel="stylesheet" media="screen and (max-device-width: 480px), handheld" href="<?php echo SimpleSAML_Module::getModuleURL('themeniifi/style_480.css'); ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleURL('themewigner/style.css'); ?>" />
+  	<link rel="stylesheet" media="screen and (max-width: 370px)" href="<?php echo SimpleSAML_Module::getModuleURL('themewigner/style_320.css'); ?>" />
+	<link rel="stylesheet" media="screen and (max-device-width: 480px), handheld" href="<?php echo SimpleSAML_Module::getModuleURL('themewigner/style_480.css'); ?>" />
 	
 	<script type="text/javascript">
 	function initiate(){
@@ -43,12 +43,10 @@ if(array_key_exists('header', $this->data)) {
 </head>
 
 <body class="index" onload="initiate()">
-	
 	<div id="wrapper">
-	
-		
 		<div id="header">
-			<img id="logo" src="<?php echo SimpleSAML_Module::getModuleURL('themeniifi/wigner_logo.png'); ?>" /> 
+			<img id="logo" src="<?php echo SimpleSAML_Module::getModuleURL('themewigner/wigner_logo.png'); ?>" /> 
+			<img id="logo" src="<?php echo SimpleSAML_Module::getModuleURL('themewigner/ek_logo.png'); ?>" height="50" /> 
 			<h1 class="mainTitle"></h1>				        
 <? if (!isset($_POST['username'])) : ?>
 			<ul class="langSelect">
@@ -86,9 +84,7 @@ if(array_key_exists('header', $this->data)) {
 		<div id="content">
 				  
 <div class="item">
-			<? if ($vho) : ?>
-			<h1 align="center">Virtuális Azonosító Szervezet (VHO)</h1>
-			<? endif;?>
+                <h1 align="center"><?php echo $this->t('{login:help_header}');?></h1>
 
 <?php
 if ($this->data['errorcode'] !== NULL) {
@@ -98,17 +94,17 @@ if ($this->data['errorcode'] !== NULL) {
 }
 ?>				
 
-	<div class="createIndex">
-		<p>A rendszerébe történő bejelentkezéshez kérjük, adja meg e-mail címét és a spamszűréses jelszavát!</p>
+	<div class="createIndex" style="width:95%">
+                <p><?php echo $this->t('{login:help_text}');?></p>
 
 </div>
 
 
 				<form id="login" method="POST" action="?" name="f">
-					<label for="username"><?php echo $this->t('{login:username}'); ?></label> <span class="example">(pl. kovacsistvan@wigner.mta.hu)</span>
-					<input type="text" name="username" id="username" value="<?php echo htmlspecialchars($this->data['username']); ?>" autocomplete= "off" />
+					<label for="username"><?php echo $this->t('{login:username}'); ?></label> <span class="example">(<?php echo $this->t('{login:help_example}');?>.: pelda.pal@wigner.mta.hu)</span>
+					<input type="text" name="username" id="username" value="<?php echo htmlspecialchars($this->data['username']); ?>" autocomplete= "on" />
 					<label for="password"><?php echo $this->t('{login:password}'); ?></label>
-					<input type="password" name="password" id="password" autocomplete= "off" />
+					<input type="password" name="password" id="password" autocomplete= "on" />
 					<input type="submit" name="submit" id="submit" value="<?php echo $this->t('{login:login_button}'); ?>" />
 
 <?php
