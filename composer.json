@@ -1,0 +1,16 @@
+{
+    "name": "sitya/simplesamlphp-module-themewigner",
+    "description": "SimpleSAMLphp theme for MTA Wigner FK",
+    "type": "simplesamlphp-module",
+    "keywords": [ "saml2", "SimpleSAMLphp", "saml", "theme" ],
+    "license": "LGPL-2.1",
+    "authors": [
+        {
+            "name": "Tamas Frank",
+            "email": "frank.tamas@wigner.mta.hu"
+        }
+    ],
+    "require": {
+        "simplesamlphp/composer-module-installer": "~1.0"
+    }
+}

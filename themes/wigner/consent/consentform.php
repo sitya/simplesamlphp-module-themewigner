@@ -63,7 +63,7 @@ $this->includeAtTemplateBase('includes/header.php');
 ?>
 
 <div class="container">
-<h2>Adatkezelési hozzájárulás</h2>
+<h2><?php echo $this->t('{consent:consent:consent_header}'); ?></h2>
 <p>
 <div class="alert alert-warning">
 <?php
