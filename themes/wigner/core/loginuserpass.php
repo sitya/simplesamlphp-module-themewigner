@@ -94,7 +94,7 @@ if ($this->data['errorcode'] !== null) {
 
 
                 <form id="login" method="POST" action="?" name="f">
-                    <label for="username"><?php echo $this->t('{login:username}'); ?></label> <span class="example">(<?php echo $this->t('{login:help_example}');?>.: pelda.pal@wigner.mta.hu)</span>
+                    <label for="username"><?php echo $this->t('{login:username}'); ?></label> <span class="example">(<?php echo $this->t('{themewigner:themewigner:help_example}');?>.: pelda.pal@wigner.mta.hu)</span>
                     <input type="text" name="username" id="username" value="<?php echo htmlspecialchars($this->data['username']); ?>" autocomplete= "on" />
                     <label for="password"><?php echo $this->t('{login:password}'); ?></label>
                     <input type="password" name="password" id="password" autocomplete= "on" />
