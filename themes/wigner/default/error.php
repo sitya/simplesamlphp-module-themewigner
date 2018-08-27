@@ -22,12 +22,11 @@ header('X-Frame-Options: SAMEORIGIN');
 	<meta name="robots" content="noindex, nofollow" />
     <meta name="googlebot" content="noarchive, nofollow" />';
 	
-	<title><?php
-if(array_key_exists('header', $this->data)) {
-        echo $this->data['header'];
-} else {
-        echo 'simpleSAMLphp';
-}
+	<title><?php if(array_key_exists('header', $this->data)) {
+		echo $this->data['header'];
+		} else {
+			echo 'simpleSAMLphp';
+		}
 ?></title>
 
 	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleURL('themewigner/style.css'); ?>" />
@@ -47,16 +46,10 @@ if(array_key_exists('header', $this->data)) {
 
 		</div>
 
-		
 		<div id="content">
 			<div class="item">
 				<h1><?php echo $this->t($this->data['dictTitle']); ?></h1>
-				<p><?php
-echo htmlspecialchars($this->t($this->data['dictDescr'], $this->data['parameters']));?></p>
-				<!--<p>
-					Bij aanhoudende problemen kun je contact opnemen met <a href="https://servicedesk.c-college.nl" target="_blank">https://servicedesk.c-college.nl</a>, telefoon 088-4699070 
-					of e&#8209;mail&nbsp;<a href="mailto: servicedesk@c-college.nl">servicedesk@c-college.nl</a>
-				</p>-->
+				<p><?php echo htmlspecialchars($this->t($this->data['dictDescr'], $this->data['parameters']));?></p>
 				<p>
 
                     <?php echo $this->t('report_trackid'); ?>

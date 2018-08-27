@@ -61,7 +61,9 @@ $this->data['head']  = '<link rel="stylesheet" type="text/css" href="/' .
 
 $this->includeAtTemplateBase('includes/header.php');
 ?>
-
+                <div>
+                        <img id="logo" src="<?php echo SimpleSAML_Module::getModuleURL('themewigner/wigner_logo.png'); ?>" />
+</div>
 <div class="container">
 <h2><?php echo $this->t('{consent:consent:consent_header}'); ?></h2>
 <p>
