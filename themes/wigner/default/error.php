@@ -29,9 +29,9 @@ header('X-Frame-Options: SAMEORIGIN');
 		}
 ?></title>
 
-	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleURL('themewigner/style.css'); ?>" />
-    <link rel="stylesheet" media="screen and (max-width: 370px)" href="<?php echo SimpleSAML_Module::getModuleURL('themewigner/style_320.css'); ?>" />
-	<link rel="stylesheet" media="screen and (max-device-width: 480px), handheld" href="<?php echo SimpleSAML_Module::getModuleURL('themewigner/style_480.css'); ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML\Module::getModuleURL('themewigner/style.css'); ?>" />
+    <link rel="stylesheet" media="screen and (max-width: 370px)" href="<?php echo SimpleSAML\Module::getModuleURL('themewigner/style_320.css'); ?>" />
+	<link rel="stylesheet" media="screen and (max-device-width: 480px), handheld" href="<?php echo SimpleSAML\Module::getModuleURL('themewigner/style_480.css'); ?>" />
 
 </head>
 
@@ -41,7 +41,7 @@ header('X-Frame-Options: SAMEORIGIN');
 
 
 		<div id="header">
-			<img id="logo" src="<?php echo SimpleSAML_Module::getModuleURL('themewigner/wigner_logo.png'); ?>" />
+			<img id="logo" src="<?php echo SimpleSAML\Module::getModuleURL('themewigner/wigner_logo.png'); ?>" />
 			<h1 class="mainTitle"></h1>
 
 		</div>
