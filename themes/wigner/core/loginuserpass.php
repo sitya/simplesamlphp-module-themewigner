@@ -1,5 +1,4 @@
 <?php
-
 header('X-Frame-Options: SAMEORIGIN');
 
 ?>
@@ -77,20 +76,17 @@ if (array_key_exists('header', $this->data)) {
         <div id="content">
 
 <div class="item">
-                <h1 align="center"><?php echo $this->t('{login:help_header}');?></h1>
 
-<?php
-if ($this->data['errorcode'] !== null) {
-    ?>
-                <p class="error"><?php echo $this->t('{errors:descr_' . $this->data['errorcode'] . '}'); ?></p>
-<?php
-}
-?>
+<?php if ($this->data['errorcode'] !== null) : ?>
 
+    <p class="error"><?php echo $this->t('{errors:descr_' . $this->data['errorcode'] . '}'); ?></p>
+    <h1 align="center"><?php echo $this->t('{login:help_header}');?></h1>
     <div class="createIndex" style="width:95%">
-                <p><?php echo $this->t('{login:help_text}');?></p>
+        <p><?php echo $this->t('{login:help_text}');?></p>
+    </div>
+    
+<?php endif; ?>
 
-</div>
 
 
                 <form id="login" method="POST" action="?" name="f">
