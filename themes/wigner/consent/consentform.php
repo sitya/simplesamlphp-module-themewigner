@@ -79,7 +79,7 @@ echo $this->t(
 
 if (array_key_exists('descr_purpose', $this->data['dstMetadata'])) {
     echo '</p><p>' . $this->t(
-        '{consent:consent:consent_purpose}', 
+        '{consent:consent:consent_purpose}',
         array(
             'SPNAME' => $dstName,
             'SPDESC' => $this->getTranslation(
@@ -139,7 +139,7 @@ if ($this->data['sppp'] !== false) {
  * @param array                     $attributes Attributes to be presented
  * @param string                    $nameParent Name of parent element
  *
- * @return string HTML representation of the attributes 
+ * @return string HTML representation of the attributes
  */
 function present_attributes($t, $attributes, $nameParent)
 {
@@ -162,7 +162,7 @@ function present_attributes($t, $attributes, $nameParent)
         if (preg_match('/^child_/', $nameraw)) {
             // Insert child table
             $parentName = preg_replace('/^child_/', '', $nameraw);
-            foreach ($value AS $child) {
+            foreach ($value as $child) {
                 $str .= "\n" . '<tr class="odd"><td style="padding: 2em">' .
                     present_attributes($t, $child, $parentName) . '</td></tr>';
             }
@@ -184,7 +184,7 @@ function present_attributes($t, $attributes, $nameParent)
             if (sizeof($value) > 1) {
                 // We hawe several values
                 $str .= '<ul>';
-                foreach ($value AS $listitem) {
+                foreach ($value as $listitem) {
                     if ($nameraw === 'jpegPhoto') {
                         $str .= '<li><img src="data:image/jpeg;base64,' .
                             htmlspecialchars($listitem) .
@@ -203,7 +203,7 @@ function present_attributes($t, $attributes, $nameParent)
                 } else {
                     $str .= htmlspecialchars($value[0]);
                 }
-            }	// end of if multivalue
+            }    // end of if multivalue
             $str .= '</td>';
 
             if ($isHidden) {
@@ -216,8 +216,8 @@ function present_attributes($t, $attributes, $nameParent)
             }
 
             $str .= '</td></tr>';
-        }	// end else: not child table
-    }	// end foreach
+        }    // end else: not child table
+    }    // end foreach
     $str .= isset($attributes)? '</table>':'';
     return $str;
 }
@@ -229,7 +229,7 @@ echo '<h3 id="attributeheader">' .
     ) .
     '</h3>';
 
-echo(present_attributes($this, $attributes, '')); 
+echo(present_attributes($this, $attributes, ''));
 ?>
 </div><!-- #container -->
 <?php
