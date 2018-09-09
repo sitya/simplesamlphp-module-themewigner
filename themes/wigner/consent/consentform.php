@@ -141,7 +141,7 @@ if ($this->data['sppp'] !== false) {
  *
  * @return string HTML representation of the attributes
  */
-function present_attributes($t, $attributes, $nameParent)
+function show_consent_attributes($t, $attributes, $nameParent)
 {
     $alternate = array('odd', 'even');
     $i = 0;
@@ -229,7 +229,7 @@ echo '<h3 id="attributeheader">' .
     ) .
     '</h3>';
 
-echo(present_attributes($this, $attributes, ''));
+echo(show_consent_attributes($this, $attributes, ''));
 ?>
 </div><!-- #container -->
 <?php
