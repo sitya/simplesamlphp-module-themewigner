@@ -38,7 +38,7 @@ if (array_key_exists('header', $this->data)) {
     <div id="wrapper">
         <div id="header">
             <img id="logo" src="<?php echo SimpleSAML\Module::getModuleURL('themewigner/wigner_logo.png'); ?>" />
-            <img id="logo" src="<?php echo SimpleSAML\Module::getModuleURL('themewigner/ek_logo.png'); ?>" height="50" />
+            <img id="logo" src="<?php echo SimpleSAML\Module::getModuleURL('themewigner/ek_logo.png'); ?>" />
             <h1 class="mainTitle"></h1>
 <?php if (!isset($_POST['username'])) : ?>
             <ul class="langSelect">
