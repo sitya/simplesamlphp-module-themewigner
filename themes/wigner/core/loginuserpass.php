@@ -77,6 +77,7 @@ if (array_key_exists('header', $this->data)) {
 
 <div class="item">
 
+    <h2 style="text-align:center;font-size: 1.5em;padding: 1em 0;margin:1em 0;border: 1px solid #000;border-width: 1px 0;">Wigner IdP - eduID / Shibboleth / Single Sign-on</h2>
 <?php if ($this->data['errorcode'] !== null) : ?>
 
     <p class="error"><?php echo $this->t('{errors:descr_' . $this->data['errorcode'] . '}'); ?></p>
